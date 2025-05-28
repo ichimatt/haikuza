@@ -54,7 +54,7 @@
 		width: calc(100% / 3);
 		height: 2px;
 		background: var(--primary);
-		transition: left 250ms ease;
+		transition: left 200ms var(--ease-out-expo);
 		box-shadow: 0 0 0 2px var(--background);
 	}
 </style>
