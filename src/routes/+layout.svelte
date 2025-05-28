@@ -3,6 +3,7 @@
 	import '../app.css';
 	export let data;
 	import TabBar from '$lib/components/TabBar.svelte';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	const { participants, totalSorted, top5, daysElapsed, globalMaxStep, currentPath } = data;
 </script>
 
