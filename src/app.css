@@ -1,0 +1,63 @@
+/* @font-face {
+	font-family: 'IBM Plex Sans Condensed';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/ibm-plex-sans-condensed-v7-latin-700.woff2') format('woff2');
+} */
+@font-face {
+	font-family: 'IBM Plex Sans Condensed';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('/fonts/ibm-plex-sans-condensed-v7-latin-600.woff2') format('woff2');
+}
+:root {
+	--background: #000;
+	--foreground: #e8e5f3;
+
+	--yellow: #ffc107;
+	--yellow-burnt: #754600;
+	--orange: #fd7e14;
+	--orange-burnt: #602d00;
+	--purple: #a754ff;
+	--indigo: #7054ff;
+	--watermelon: #ff5457;
+	--watermelon-burnt: #541122;
+	--turquoise: #00ffbf;
+	--turquoise-burnt: #00514d;
+
+	--primary: var(--yellow);
+	--primary-ghost: var(--yellow-burnt);
+	--secondary: var(--orange);
+	--secondary-ghost: var(--orange-burnt);
+
+	--stat-size: 2.25rem;
+	--detail-size: 1rem;
+
+	--h-gap: 21px;
+	--v-gap: 14px;
+	--list-gap: 42px;
+
+	--max-w: 512px;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: system-ui, sans-serif;
+	background: #fafafa;
+	font-family: 'IBM Plex Sans Condensed', system-ui, sans-serif;
+	font-weight: 600;
+	color: var(--foreground);
+	background-color: var(--background);
+}
+small {
+	font-size: var(--detail-size);
+	line-height: var(--detail-size);
+	display: block;
+}
+small:first-child {
+	margin-top: 1px;
+}
