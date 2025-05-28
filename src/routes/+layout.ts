@@ -1,6 +1,10 @@
 // src/routes/+layout.ts
 import type { LayoutLoad } from './$types';
 import { load as pageLoad } from './+page';
+import { dev } from '$app/environment';
+import { injectAnalytics } from '@vercel/analytics/sveltekit';
+
+injectAnalytics({ mode: dev ? 'development' : 'production' });
 
 export const load: LayoutLoad = async (event) => {
 	// reuse the +page.ts load function for shared data
