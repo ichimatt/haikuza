@@ -64,9 +64,9 @@
 			<small>
 				{#if hover}
 					{formatDate(hover.date)}:
-					<span class="primary-text"
-						>{new Date(hover.date) > new Date() ? '–' : formatNumber(hover.steps)}</span
-					>
+					<span class={hover.steps >= threshold ? 'primary-text' : 'secondary-text'}>
+						{new Date(hover.date) > new Date() ? '–' : formatNumber(hover.steps)}
+					</span>
 				{:else if streak === daily.length}
 					<span class="primary-text">unbroken</span>
 				{:else}
@@ -148,6 +148,9 @@
 	}
 	.primary-text {
 		color: var(--primary);
+	}
+	.secondary-text {
+		color: var(--secondary);
 	}
 	svg {
 		display: block;
