@@ -88,6 +88,20 @@ export const load: PageLoad = async ({ fetch }) => {
 		}
 	}
 
+	// Correct step count for Batsi Ziki
+	{
+		const correctionsBZ: Record<string, number> = {
+			'2025-05-25': 13189
+		};
+		const batsi = participants.find((p) => p.name === 'Batsi Ziki');
+		if (batsi) {
+			batsi.daily = batsi.daily.map((d) => ({
+				date: d.date,
+				steps: correctionsBZ[d.date] ?? d.steps
+			}));
+		}
+	}
+
 	// Compute max streaks
 	participants.forEach((p) => {
 		p.maxStreak = computeStreak(p.daily);

@@ -110,9 +110,9 @@
 					class="bar"
 					class:above={d.steps >= threshold}
 					class:hidden={hover && d != hover}
-					x={i * barW + 1}
+					x={i * barW + 0.5}
 					y={h - (d.steps / maxStep) * h}
-					width={barW - 2}
+					width={barW - 1}
 					height={(d.steps / maxStep) * h}
 				/>
 			</g>
